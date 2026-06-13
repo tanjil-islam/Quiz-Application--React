@@ -1,9 +1,9 @@
 import classes from '../../styles/Signup.module.css'
+import Button from '../Button'
+import Checkbox from '../Checkbox'
 import Form from '../Form'
 import Illsustration from '../Illustration'
 import TextInput from '../TextInput'
-import Checkbox from '../Checkbox'
-import Button from '../Button'
 
 export default function Signup() {
   return (
@@ -14,16 +14,26 @@ export default function Signup() {
         <Form className={`${classes.Signup} `}>
           <TextInput type='text' placeholder='Enter name' icon='person' />
 
-          <TextInput type='text' placeholder='Enter email' icon='alternate_email' />
+          <TextInput
+            type='text'
+            placeholder='Enter email'
+            icon='alternate_email'
+          />
           <TextInput type='password' placeholder='Enter password' icon='lock' />
-          <TextInput type='password' placeholder='Confirm password' icon='lock_clock' />
+          <TextInput
+            type='password'
+            placeholder='Confirm password'
+            icon='lock_clock'
+          />
           <Checkbox text='I agree to the Terms &amp; Conditions' />
 
-            <Button>Submit Now</Button>
+          <Button>
+            <span>Submit Now</span>
+          </Button>
 
-            <div className="info">
-                Already have an account? <a href="./Login">Login</a> instead.
-            </div>
+          <div className='info'>
+            Already have an account? <a href='./Login'>Login</a> instead.
+          </div>
         </Form>
       </div>
     </>
