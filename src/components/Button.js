@@ -1,5 +1,13 @@
 import classes from '../styles/Button.module.css'
 
-export default function Button({ className, children }) {
-  return <div className={` ${classes.button} ${className}`}>{children}</div>
+export default function Button({ className, children, disabled, type }) {
+  return (
+    <button
+      className={` ${classes.button} ${className}`}
+      disabled={disabled}
+      type={type}
+    >
+      {children}
+    </button>
+  )
 }
