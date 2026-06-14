@@ -1,29 +1,33 @@
-import classes from "../styles/Videos.module.css";
-import Video from "./Video";
-import { Link } from "react-router-dom";
+import { useState } from 'react'
+import InfiniteScroll from 'react-infinite-scroll-component'
+import { Link } from 'react-router-dom'
+import useVideoList from '../hooks/useVideoList'
+import Video from './Video'
 
 export default function Videos() {
-    return (
-        <div className={classes.videos}>
+  const [page, setPage] = useState(1)
+  const { loading, error, videos, hasMore } = useVideoList(page)
 
-            <Link to="/quiz">
-                <Video />
-            </Link>
-            <Link to="/quiz">
-                <Video />
-            </Link>
-            <Link to="/quiz">
-                <Video />
-            </Link>
-            <Link to="/quiz">
-                <Video />
-            </Link>
-            <Link to="/quiz">
-                <Video />
-            </Link>
-            <Link to="/quiz">
-                <Video />
-            </Link>
-        </div>
-    );
+  return (
+    <div>
+      {videos.length > 0 && (
+        <InfiniteScroll
+          dataLength={videos.length}
+          hasMore={hasMore}
+          next={() => setPage(page + 8)}
+        >
+          {videos.map((video) => 
+        video.noq > 0 ? (
+          <Link to="/quiz" key={video.youtubeID}>
+            <Video title={video.title} id={video.youtubeID} noq={video.noq} />
+          </Link>
+        ) : (<Video title={video.title} id={video.youtubeID} noq={video.noq} key={video.youtubeID} />)
+          )}
+        </InfiniteScroll>
+      )}
+      {!loading && videos.length === 0 && <div>No videos found</div>}
+      {error && <div>There was an error loading the videos</div>}
+      {loading && <div>Loading...</div>}
+    </div>
+  )
 }
