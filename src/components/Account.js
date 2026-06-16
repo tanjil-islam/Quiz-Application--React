@@ -5,14 +5,14 @@ import classes from '../styles/Account.module.css'
 export default function Account() {
   const { currentUser, logout } = useAuth()
   return (
-    <div class={classes.account}>
+    <div className={classes.account}>
       {currentUser ? (
         <>
-          <span class='material-icons-outlined' title='Account'>
+          <span className='material-icons-outlined' title='Account'>
             account_circle
           </span>
           <span>{currentUser.displayName}</span>
-          <span class='material-icons-outlined' title='Logout' onClick={logout}>
+          <span className='material-icons-outlined' title='Logout' onClick={logout}>
             {' '}
             logout{' '}
           </span>

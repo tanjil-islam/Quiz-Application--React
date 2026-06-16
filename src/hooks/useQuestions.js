@@ -22,6 +22,9 @@ export default function useQuestions(videoID) {
         if (snapshot.exists()) {
           setQuestions(Object.values(snapshot.val()));
         }
+        else {
+          setQuestions([]);
+        }
       } catch (err) {
         console.log(err);
         setLoading(false);
