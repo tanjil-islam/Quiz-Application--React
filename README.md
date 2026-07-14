@@ -1,57 +1,96 @@
-# Multi-Page Educational E-Learning & Quiz Engine
+🧠 Quiz Application
 
-A robust, fully functional production-ready React application featuring secure routing guards, real-time video playback tracking with persistent user telemetry, an automated quiz scoring engine, and live third-party REST API image rendering pipelines. 
+A fully responsive single-page quiz application built with React 19 and Firebase backend, featuring infinite scroll, client-side navigation, and a clean interactive UI.
 
----
+🔗 Links
 
-##  Key Milestones Built
 
-* **Secure Authentication Loop:** Fully functional session management using Firebase Authentication (Email/Password lifecycle wrapper syncing to an optimized global context layer).
-* **Defensive Navigation Guards:** Dual-role route shielding utilizing structured `<PrivateRoute>` and `<PublicRoute>` containers to isolate user dashboards from unauthorized guest traffic.
-* **Cloud Firestore Data Syncing:** Distributed cloud collections to query dynamic quiz questions sequentially and stream available video assets directly from a NoSQL architecture.
-* **User Telemetry Video Tracker:** Captures real-time HTML5 media playing statistics via pointer references (`useRef`), executing background document updates (`setDoc`) to preserve user timestamps on suspension.
-* **Dynamic Summary Assets:** Asynchronous integrations with the Pexels Image REST API utilizing customized query tokens to render context-driven thumbnails based on course topics.
+Live Demo: https://quizdeckapp.netlify.app
+GitHub: https://github.com/tanjil-islam/Quiz-Application--React
 
----
 
-## 📁 Repository Directory Map
 
-```text
+✨ Features
 
+
+🎯 Interactive quiz with real-time score tracking
+♾️ Infinite scroll for seamless question browsing
+🧭 Client-side navigation using React Router DOM
+🔥 Firebase backend for data storage and retrieval
+⚡ Optimized production performance
+📱 Fully responsive across all devices
+🎨 Clean and interactive UI design
+🚀 Deployed on Netlify for fast and reliable access
+
+
+🛠️ Tech Stack
+
+Category                Technologies
+Frontend                React.js 19, JavaScript (ES6+), HTML5, CSS3
+Routing                 React Router DOM
+Backend                 Firebase (Firestore)
+Infinite Scroll         React Infinite Scroll
+Deployment               Netlify
+
+
+📸 Screenshots
+
+Visit the live demo to experience the full quiz application:
+👉 https://quizdeckapp.netlify.app
+
+🚀 Getting Started
+
+Prerequisites
+
+
+Node.js 18+
+Firebase account and project setup
+
+
+
+##Installation
+
+# Clone the repository
+git clone https://github.com/tanjil-islam/Quiz-Application--React.git
+
+# Navigate to project directory
+cd Quiz-Application--React
+
+# Install dependencies
+npm install
+
+# Create .env file and add your Firebase config
+cp .env.example .env
+
+# Run the development server
+npm run dev
+
+Open http://localhost:5173 in your browser.
+
+# Environment Variables
+
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+
+📁 Project Structure
+
+Quiz-Application--React/
 ├── src/
-│   ├── assets/                  # Visual SVGs and static media resources
-│   ├── components/
-│   │   ├── pages/
-│   │   │   ├── Home.js          # Welcome & video landing dashboard view
-│   │   │   ├── Login.js         # User session portal entrance
-│   │   │   ├── Quiz.js          # Active sequential challenge component
-│   │   │   ├── Result.js        # Performance metrics & scoring terminal
-│   │   │   └── Signup.js        # New member account onboarding view
-│   │   ├── Account.js           # Handles user profile configuration details
-│   │   ├── Analysis.js          # Itemized analytics view for quiz answers
-│   │   ├── Answers.js           # Renders interactive answer option structures
-│   │   ├── App.js               # Central application layout container
-│   │   ├── Button.js            # Modular UI button primitive
-│   │   ├── Checkbox.js          # Custom interactive option wrapper
-│   │   ├── Form.js              # Multi-use standard form abstraction
-│   │   ├── Illustration.js      # Visual assets & vector icon router
-│   │   ├── Layout.js            # Global layout wrappers and theme framing
-│   │   ├── LoginForm.js         # Decoupled credential logging input logic
-│   │   ├── MiniPlayer.js        # PIP media overlay window component
-│   │   ├── Nav.js               # Primary navigation bar control unit
-│   │   ├── PrivateRoute.js      # Protects views from unauthorized traffic
-│   │   ├── ProgressBar.js       # Visual status indicators for videos and quizzes
-│   │   ├── PublicRoute.js       # Guest-only routing wall configuration
-│   │   ├── Questions.js         # Dynamic structural evaluation layout
-│   │   ├── SignupForm.js        # Registration logic wrapper
-│   │   ├── Summary.js           # Performance score recap interface
-│   │   ├── TextInput.js         # Styled input element primitive
-│   │   ├── Video.js             # Atomic video portal thumbnail representation
-│   │   └── Videos.js            # Collection grid mapping operational assets
-│   ├── contexts/
-│   │   └── AuthContext.js       # Broadcasts authentication states globally
-│   ├── hooks/
-│   │   ├── useAnswers.js        # Manages solution validation matrices
-│   │   ├── useFetch.js          # Generic REST API query layer (Pexels pipelines)
-│   │   ├── useQuestions.js      # Pulls questionnaire documentation from Firestore
-│   │   └── useVideoList.js      # Fetches video resource collections from the cloud
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Route-based page components
+│   ├── firebase/         # Firebase configuration
+│   └── App.jsx           # Main application with routing
+├── index.html
+└── README.md
+
+👨‍💻 Author
+
+Md. Tanjirul Islam
+
+GitHub: @tanjil-islam
+LinkedIn: [md-tanjirul-islam](https://www.linkedin.com/in/md-tanjirul-islam-162a771b2/)
+Email: tanjil.islam040820@gmail.com
