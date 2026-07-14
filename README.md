@@ -1,16 +1,18 @@
-🧠 Quiz Application
+# Quiz Application
 
-A fully responsive single-page quiz application built with React 19 and Firebase backend, featuring infinite scroll, client-side navigation, and a clean interactive UI.
+-A fully responsive single-page quiz application built with React 19 and Firebase backend, featuring infinite scroll, client-side navigation, and a clean interactive UI.
 
-🔗 Links
+# Links
+- Live Demo: https://quizdeckapp.netlify.app
+- GitHub: https://github.com/tanjil-islam/Quiz-Application--React
 
 
-Live Demo: https://quizdeckapp.netlify.app
+# Live Demo: https://quizdeckapp.netlify.app
 GitHub: https://github.com/tanjil-islam/Quiz-Application--React
 
 
 
-✨ Features
+# Features
 
 
 🎯 Interactive quiz with real-time score tracking
@@ -23,7 +25,7 @@ GitHub: https://github.com/tanjil-islam/Quiz-Application--React
 🚀 Deployed on Netlify for fast and reliable access
 
 
-🛠️ Tech Stack
+# Tech Stack
 
 Category                Technologies
 Frontend                React.js 19, JavaScript (ES6+), HTML5, CSS3
@@ -33,15 +35,14 @@ Infinite Scroll         React Infinite Scroll
 Deployment               Netlify
 
 
-📸 Screenshots
+# Screenshots
 
 Visit the live demo to experience the full quiz application:
 👉 https://quizdeckapp.netlify.app
 
-🚀 Getting Started
+# Getting Started
 
 Prerequisites
-
 
 Node.js 18+
 Firebase account and project setup
