@@ -45,7 +45,7 @@
 
 
 
-##Installation
+## Installation
 
 # Clone the repository
 - git clone https://github.com/tanjil-islam/Quiz-Application--React.git
